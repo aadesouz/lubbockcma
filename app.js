@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const nameErr = document.getElementById('name-error');
@@ -175,17 +175,37 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate successful submission
       submitBtn.disabled = true;
+      const originalBtnText = submitBtn.textContent;
       submitBtn.textContent = 'Sending...';
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
 
-      setTimeout(() => {
-        formStatus.className = 'form-status success';
-        formStatus.textContent = 'Thank you for your inquiry! A representative from the Lubbock CMA Guild will be in touch with you shortly.';
-        contactForm.reset();
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          formStatus.className = 'form-status success';
+          formStatus.textContent = 'Thank you for your inquiry! A representative from the Lubbock CMA Guild will be in touch with you shortly.';
+          contactForm.reset();
+        } else {
+          formStatus.className = 'form-status error';
+          formStatus.textContent = data.message || 'Something went wrong submitting the form. Please try again or reach out directly.';
+        }
+      } catch (err) {
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'Network error. Please check your connection and try again.';
+      } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
-      }, 700);
+        submitBtn.textContent = originalBtnText;
+      }
     });
   }
 });
