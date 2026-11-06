@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-  // 5. Historical Archives Slideshow
+  // 5. Historical Archives Slideshow (Automatic advancing with touch/swipe support)
   const slides = document.querySelectorAll('#slideshow-container .slide');
   const prevBtn = document.getElementById('prev-slide');
   const nextBtn = document.getElementById('next-slide');
@@ -272,13 +272,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (slides.length > 0 && prevBtn && nextBtn && indicatorsContainer) {
     let currentSlide = 0;
+    let slideInterval = null;
+    const SLIDE_DELAY = 4500; // 4.5 seconds per photo
 
     // Create indicator dots
     slides.forEach((_, idx) => {
       const dot = document.createElement('button');
       dot.className = `indicator-dot ${idx === 0 ? 'active' : ''}`;
       dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
-      dot.addEventListener('click', () => goToSlide(idx));
+      dot.addEventListener('click', () => {
+        goToSlide(idx);
+        resetAutoSlide();
+      });
       indicatorsContainer.appendChild(dot);
     });
 
@@ -292,17 +297,66 @@ document.addEventListener('DOMContentLoaded', () => {
       dots[currentSlide].classList.add('active');
     }
 
-    prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
-    nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+    function startAutoSlide() {
+      if (!slideInterval) {
+        slideInterval = setInterval(() => {
+          goToSlide(currentSlide + 1);
+        }, SLIDE_DELAY);
+      }
+    }
 
-    // Optional subtle auto-rotation every 6 seconds
-    let slideInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
+    function stopAutoSlide() {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null;
+      }
+    }
+
+    function resetAutoSlide() {
+      stopAutoSlide();
+      startAutoSlide();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentSlide - 1);
+      resetAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentSlide + 1);
+      resetAutoSlide();
+    });
+
+    // Pause on mouse hover (desktop)
     const wrapper = document.querySelector('.slideshow-wrapper');
     if (wrapper) {
-      wrapper.addEventListener('mouseenter', () => clearInterval(slideInterval));
-      wrapper.addEventListener('mouseleave', () => {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
-      });
+      wrapper.addEventListener('mouseenter', stopAutoSlide);
+      wrapper.addEventListener('mouseleave', startAutoSlide);
+
+      // Mobile touch swipe gestures
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      wrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoSlide();
+      }, { passive: true });
+
+      wrapper.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 40) {
+          if (diff < 0) {
+            goToSlide(currentSlide + 1); // Swiped left -> next
+          } else {
+            goToSlide(currentSlide - 1); // Swiped right -> prev
+          }
+        }
+        startAutoSlide();
+      }, { passive: true });
     }
+
+    // Start automatic cycling immediately
+    startAutoSlide();
   }
+});
