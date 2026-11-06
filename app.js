@@ -101,7 +101,61 @@ document.addEventListener('DOMContentLoaded', () => {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.trim().toLowerCase();
+      // Automatically expand on search query so user can see matched results
+      const dirList = document.getElementById('directory-list');
+      const toggleDirBtn = document.getElementById('toggle-directory-btn');
+      if (searchQuery && dirList && !dirList.classList.contains('is-expanded')) {
+        dirList.classList.add('is-expanded');
+        if (toggleDirBtn) {
+          toggleDirBtn.setAttribute('aria-expanded', 'true');
+          toggleDirBtn.querySelector('.btn-text').textContent = 'Collapse Directory';
+          toggleDirBtn.querySelector('.btn-icon').innerHTML = '&uarr;';
+        }
+      }
       applyDirectoryFilters();
+    });
+  }
+
+  // 3b. Mobile Condensed Directory & Events Toggles
+  const toggleDirBtn = document.getElementById('toggle-directory-btn');
+  const directoryListEl = document.getElementById('directory-list');
+
+  if (toggleDirBtn && directoryListEl) {
+    toggleDirBtn.addEventListener('click', () => {
+      const isExpanded = directoryListEl.classList.toggle('is-expanded');
+      toggleDirBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      const textSpan = toggleDirBtn.querySelector('.btn-text');
+      const iconSpan = toggleDirBtn.querySelector('.btn-icon');
+      if (isExpanded) {
+        textSpan.textContent = 'Collapse Directory';
+        iconSpan.innerHTML = '&uarr;';
+      } else {
+        textSpan.textContent = `View All Providers (${providerCards.length})`;
+        iconSpan.innerHTML = '&darr;';
+        // Scroll back smoothly to directory top if collapsed from bottom
+        document.getElementById('directory').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  const toggleEventsBtn = document.getElementById('toggle-events-btn');
+  const eventsGrid = document.querySelector('.events-section .grid-3');
+
+  if (toggleEventsBtn && eventsGrid) {
+    const eventCards = eventsGrid.querySelectorAll('.event-card');
+    toggleEventsBtn.addEventListener('click', () => {
+      const isExpanded = eventsGrid.classList.toggle('is-expanded');
+      toggleEventsBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+      const textSpan = toggleEventsBtn.querySelector('.btn-text');
+      const iconSpan = toggleEventsBtn.querySelector('.btn-icon');
+      if (isExpanded) {
+        textSpan.textContent = 'Collapse Events';
+        iconSpan.innerHTML = '&uarr;';
+      } else {
+        textSpan.textContent = `View All Events (${eventCards.length})`;
+        iconSpan.innerHTML = '&darr;';
+        document.getElementById('events').scrollIntoView({ behavior: 'smooth' });
+      }
     });
   }
 

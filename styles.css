@@ -1452,4 +1452,49 @@ ul {
   .site-footer {
     padding: 3rem 0 1.5rem;
   }
+
+  /* --------------------------------------------------------------------------
+     Mobile Collapsible / Condensed Directory and Events
+     -------------------------------------------------------------------------- */
+  .mobile-expand-wrapper {
+    display: block !important;
+    margin: 1.5rem auto 1rem;
+  }
+
+  .mobile-expand-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: #ffffff;
+    border: 1.5px solid var(--color-border);
+    color: var(--color-primary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .mobile-expand-btn:active {
+    background: var(--color-surface-muted);
+  }
+
+  /* Default collapsed state for directory cards past the first 2 on mobile */
+  .directory-grid:not(.is-expanded) .provider-card:nth-child(n+3) {
+    display: none !important;
+  }
+
+  /* Default collapsed state for events past the top 2 on mobile */
+  .events-section .grid-3:not(.is-expanded) .event-card:nth-child(n+3) {
+    display: none !important;
+  }
+}
+
+/* Hide expand buttons on desktop */
+.mobile-expand-wrapper {
+  display: none;
 }
