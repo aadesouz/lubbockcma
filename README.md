@@ -2,7 +2,6 @@
 
 Official website for the **Catholic Medical Association of Lubbock, Texas**, serving Catholic physicians, nurses, residents, and healthcare students across the South Plains and West Texas.
 
-Re-established and modernized using historical records and archives from the original `cmalubbock.org` guild site (2004–2017).
 
 ---
 
