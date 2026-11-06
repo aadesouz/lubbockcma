@@ -22,7 +22,7 @@
   <!-- Announcement Bar -->
   <div class="announcement-bar">
     <div class="container announcement-inner">
-      <span>✝ Serving Catholic Healthcare Professionals &amp; Medical Students in Lubbock &amp; the South Plains</span>
+      <span>Serving Catholic Healthcare Professionals and Medical Students in Lubbock and the South Plains</span>
       <span class="domains-badge">lubbockcma.org &bull; cmalubbock.com</span>
     </div>
   </div>
@@ -31,12 +31,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="CMA Lubbock Home">
-        <div class="brand-crest" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v20M7 8h10"></path>
-            <circle cx="12" cy="12" r="9"></circle>
-          </svg>
-        </div>
+        <img src="images/Logo350.jpg" alt="Catholic Medical Association of Lubbock Crest" class="brand-logo-img" width="42" height="42">
         <div class="brand-text">
           <span class="brand-title">Catholic Medical Association</span>
           <span class="brand-sub">Lubbock Guild &bull; West Texas</span>
@@ -54,6 +49,7 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#prayer" class="nav-link">Physician's Prayer</a></li>
           <li><a href="#heritage" class="nav-link">Heritage</a></li>
+          <li><a href="#gallery" class="nav-link">Archives &amp; Slideshow</a></li>
           <li><a href="#directory" class="nav-link">Directory</a></li>
           <li><a href="#events" class="nav-link">Events</a></li>
           <li><a href="#join" class="btn btn-primary nav-cta">Join Guild</a></li>
@@ -78,8 +74,8 @@
           </div>
           <div class="hero-meta">
             <div class="meta-item">
-              <strong>Est. 2004</strong>
-              <span>Serving Lubbock 20+ Years</span>
+              <strong>Est. 1997</strong>
+              <span>Serving Lubbock &bull; Diocesan Guild</span>
             </div>
             <div class="meta-divider" aria-hidden="true"></div>
             <div class="meta-item">
@@ -101,7 +97,7 @@
             <blockquote class="preview-quote">
               &ldquo;Divine Physician, who in your earthly life showed special concern for those who suffer... make us ever ready to alleviate the trials of our brethren.&rdquo;
             </blockquote>
-            <p class="quote-author">&mdash; Pope Saint John Paul II (Vatican, 2000)</p>
+            <p class="quote-author">Pope Saint John Paul II (Vatican, 2000)</p>
             <a href="#prayer" class="card-link">Read Full Prayer &rarr;</a>
           </div>
         </div>
@@ -119,17 +115,17 @@
 
         <div class="grid grid-3">
           <article class="info-card">
-            <div class="icon-bubble" aria-hidden="true">🕊️</div>
+            <div class="card-bullet">Faith</div>
             <h3>Spiritual Fellowship</h3>
             <p>Supporting doctors and healthcare workers in integrating their Catholic faith with everyday medical practice, ethics, and patient care.</p>
           </article>
           <article class="info-card">
-            <div class="icon-bubble" aria-hidden="true">🎓</div>
-            <h3>Student Mentorship</h3>
+            <div class="card-bullet">Mentorship</div>
+            <h3>Student Formation</h3>
             <p>Walking alongside Texas Tech University Health Sciences Center (TTUHSC) medical, nursing, and pharmacy students facing modern ethical dilemmas.</p>
           </article>
           <article class="info-card">
-            <div class="icon-bubble" aria-hidden="true">🩺</div>
+            <div class="card-bullet">Ethics</div>
             <h3>Defense of Human Life</h3>
             <p>Promoting Hippocratic medicine and defending the sacred dignity of every patient from conception to natural death in hospitals and clinics.</p>
           </article>
@@ -142,6 +138,7 @@
       <div class="container">
         <div class="prayer-container">
           <div class="prayer-header text-center">
+            <img src="images/lukeshadow.jpg" alt="Icon of Saint Luke" class="prayer-saint-img" width="110" height="147">
             <span class="section-tag">Spiritual Foundation</span>
             <h2>Prayer of the Catholic Physician</h2>
             <p class="prayer-subtitle">Bestowed by Pope Saint John Paul II &bull; The Vatican, June 29, 2000</p>
@@ -165,12 +162,50 @@
       </div>
     </section>
 
+    <!-- Historical Archives & Slideshow Section -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Historical Archives</span>
+          <h2>White Mass &amp; Guild Photographic Archives</h2>
+          <p class="section-desc">Preserved photographs from the original cmalubbock.org historical collections.</p>
+        </div>
+
+        <div class="slideshow-wrapper">
+          <div class="slideshow-display" id="slideshow-container" aria-live="polite">
+            <div class="slide active">
+              <img src="images/dscn8264.jpg" alt="Annual White Mass Celebration - Lubbock Catholic Healthcare Professionals" class="slide-img">
+              <div class="slide-caption">Annual White Mass Celebration with Guild Clergy and Members</div>
+            </div>
+            <div class="slide">
+              <img src="images/dscn8358.jpg" alt="Lubbock Guild Members Gathering in White Coats" class="slide-img">
+              <div class="slide-caption">Lubbock Physicians and Healthcare Personnel at Diocesan Gathering</div>
+            </div>
+            <div class="slide">
+              <img src="images/dscn8319.jpg" alt="Diocesan White Mass Altar and Clergy" class="slide-img">
+              <div class="slide-caption">Celebration of Mass for Physicians and Nurses on the Feast of St. Luke</div>
+            </div>
+            <div class="slide">
+              <img src="images/groupshadow.jpg" alt="Historical CMA Lubbock Guild Officers" class="slide-img">
+              <div class="slide-caption">Guild Leadership and Members Fellowship</div>
+            </div>
+          </div>
+
+          <div class="slideshow-controls">
+            <button id="prev-slide" class="slide-btn" aria-label="Previous Slide">&larr; Previous</button>
+            <div class="slide-indicators" id="slide-indicators"></div>
+            <button id="next-slide" class="slide-btn" aria-label="Next Slide">Next &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Guild Heritage & Founders -->
     <section class="section heritage-section" id="heritage">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">History &amp; Founders</span>
-          <h2>Two Decades of Catholic Medicine in West Texas</h2>
+          <span class="section-tag">History and Leadership</span>
+          <h2>Catholic Medicine in West Texas Since 1997</h2>
           <p class="section-desc">Honoring the physicians who first gathered to establish the Lubbock CMA Guild.</p>
         </div>
 
@@ -178,10 +213,10 @@
           <div class="heritage-text">
             <h3>Our Origins in Lubbock</h3>
             <p>
-              In the early 2000s, Lubbock physicians recognized the need for a local guild of the Catholic Medical Association to provide camaraderie, bioethical guidance, and faithful witness across the healthcare institutions of the South Plains.
+              In 1997, as the national organization transitioned from the National Federation of Catholic Physicians Guilds to the Catholic Medical Association, local physicians in Lubbock established the guild to provide camaraderie, bioethical guidance, and faithful witness across the healthcare institutions of the South Plains.
             </p>
             <p>
-              Under the leadership of founding clinicians including <strong>Dr. Kenneth E. Kruczek</strong>, <strong>Dr. Benny Phillips</strong>, and <strong>Dr. Gary Simmons</strong>, the guild established annual White Masses, patient referral directories, and student engagement with the Texas Tech University Health Sciences Center.
+              Under the leadership of clinicians including <strong>Dr. Kenneth E. Kruczek</strong>, <strong>Deacon Dr. Benny Phillips</strong>, and <strong>Dr. Gary Simmons</strong>, the guild established annual White Masses, patient referral directories, and student engagement with the Texas Tech University Health Sciences Center.
             </p>
             <p>
               Today, this renewed digital presence honors that continuous mission: providing healthcare rooted in genuine love for God and neighbor.
@@ -190,14 +225,14 @@
 
           <div class="founders-cards">
             <div class="founder-card">
-              <div class="founder-role">Guild Pioneer &bull; Cardiology</div>
-              <h4>Dr. Kenneth E. Kruczek, M.D.</h4>
-              <p>Dedicated physician and advocate for ethical cardiovascular care and guild fellowship in Lubbock.</p>
+              <div class="founder-role">Guild Pioneer &bull; Internal Medicine &amp; Cardiology</div>
+              <h4>Dr. Kenneth E. Kruczek, D.O.</h4>
+              <p>Dedicated physician and advocate for ethical clinical care and guild fellowship in Lubbock.</p>
             </div>
             <div class="founder-card">
-              <div class="founder-role">Guild Pioneer &bull; Obstetrics &amp; Gynecology</div>
+              <div class="founder-role">Guild Pioneer &bull; Deacon &bull; Obstetrics &amp; Gynecology</div>
               <h4>Dr. Benny Phillips, M.D.</h4>
-              <p>Longtime champion of maternal health, natural procreative care, and the defense of unborn life.</p>
+              <p>Longtime champion of maternal health, natural procreative care, and the defense of human life.</p>
             </div>
             <div class="founder-card">
               <div class="founder-role">Guild Pioneer &bull; Pathology</div>
@@ -214,7 +249,7 @@
       <div class="container">
         <div class="section-header text-center">
           <span class="section-tag">Find Care</span>
-          <h2>Physician &amp; Healthcare Directory</h2>
+          <h2>Physician and Healthcare Directory</h2>
           <p class="section-desc">Connect with Catholic physicians, specialists, dentists, and allied healthcare professionals in Lubbock and surrounding counties.</p>
         </div>
 
@@ -238,14 +273,14 @@
         <div class="directory-grid" id="directory-list" aria-live="polite">
           <article class="provider-card" data-specialty="cardiology">
             <div class="provider-header">
-              <span class="specialty-badge">Cardiovascular Disease</span>
-              <h3>Dr. Kenneth E. Kruczek, M.D.</h3>
-              <p class="provider-affil">Lubbock Cardiology Associates</p>
+              <span class="specialty-badge">Internal Medicine &amp; Cardiovascular Care</span>
+              <h3>Dr. Kenneth E. Kruczek, D.O.</h3>
+              <p class="provider-affil">Lubbock Practice</p>
             </div>
             <div class="provider-details">
-              <p class="detail-line">📍 3506 21st Street, Ste. 605, Lubbock, TX 79410</p>
-              <p class="detail-line">📞 (806) 725-4130</p>
-              <p class="detail-desc">General and interventional adult cardiology care adhering to Catholic moral principles.</p>
+              <p class="detail-line">Address: 3506 21st Street, Ste. 605, Lubbock, TX 79410</p>
+              <p class="detail-line">Phone: (806) 725-4130</p>
+              <p class="detail-desc">Adult medical care adhering to Catholic moral principles.</p>
             </div>
           </article>
 
@@ -253,12 +288,12 @@
             <div class="provider-header">
               <span class="specialty-badge">Obstetrics &amp; Gynecology</span>
               <h3>Dr. Benny Phillips, M.D.</h3>
-              <p class="provider-affil">Lubbock Women's Health Care</p>
+              <p class="provider-affil">Lubbock Practice</p>
             </div>
             <div class="provider-details">
-              <p class="detail-line">📍 3621 22nd Street, Lubbock, TX 79410</p>
-              <p class="detail-line">📞 (806) 796-1317</p>
-              <p class="detail-desc">Pro-life obstetrics, compassionate gynecologic health, and natural family planning support.</p>
+              <p class="detail-line">Address: 3621 22nd Street, Lubbock, TX 79410</p>
+              <p class="detail-line">Phone: (806) 796-1317</p>
+              <p class="detail-desc">Compassionate gynecologic health, natural procreative care, and protection of unborn life.</p>
             </div>
           </article>
 
@@ -266,11 +301,11 @@
             <div class="provider-header">
               <span class="specialty-badge">Anatomic &amp; Clinical Pathology</span>
               <h3>Dr. Gary Simmons, M.D.</h3>
-              <p class="provider-affil">Pathology Services of the South Plains</p>
+              <p class="provider-affil">Pathology Consultation</p>
             </div>
             <div class="provider-details">
-              <p class="detail-line">📍 4005 24th St., Lubbock, TX 79410</p>
-              <p class="detail-line">📞 (806) 792-2767</p>
+              <p class="detail-line">Address: 4005 24th St., Lubbock, TX 79410</p>
+              <p class="detail-line">Phone: (806) 792-2767</p>
               <p class="detail-desc">Diagnostic pathology consultation and bioethics advisory for local medical professionals.</p>
             </div>
           </article>
@@ -279,11 +314,11 @@
             <div class="provider-header">
               <span class="specialty-badge">Family Medicine</span>
               <h3>Catholic Family Medicine Network</h3>
-              <p class="provider-affil">Lubbock &amp; South Plains</p>
+              <p class="provider-affil">Lubbock and South Plains</p>
             </div>
             <div class="provider-details">
-              <p class="detail-line">📍 Lubbock, Texas Medical District</p>
-              <p class="detail-line">📞 Contact Guild for Referral</p>
+              <p class="detail-line">Location: Lubbock, Texas Medical District</p>
+              <p class="detail-line">Inquiries: Contact Guild for Referral</p>
               <p class="detail-desc">Full-scope primary care for all generations honoring the sanctity of life.</p>
             </div>
           </article>
@@ -295,8 +330,8 @@
               <p class="provider-affil">Lubbock Regional Clinics</p>
             </div>
             <div class="provider-details">
-              <p class="detail-line">📍 Lubbock, TX 79410</p>
-              <p class="detail-line">📞 Contact Guild for Referral</p>
+              <p class="detail-line">Location: Lubbock, TX 79410</p>
+              <p class="detail-line">Inquiries: Contact Guild for Referral</p>
               <p class="detail-desc">Compassionate healthcare for infants, children, and adolescents guided by Christian care.</p>
             </div>
           </article>
@@ -313,8 +348,8 @@
     <section class="section events-section" id="events">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-tag">Gatherings &amp; Liturgy</span>
-          <h2>Guild Events &amp; Traditions</h2>
+          <span class="section-tag">Gatherings and Liturgy</span>
+          <h2>Guild Events and Traditions</h2>
           <p class="section-desc">Uniting for prayer, fellowship, and continuing formation.</p>
         </div>
 
@@ -323,12 +358,12 @@
             <div class="event-badge">Annual Liturgy</div>
             <h3>The White Mass</h3>
             <p class="event-meta">Feast of St. Luke (October) &bull; Lubbock, TX</p>
-            <p>Celebrated annually for all healthcare personnel—doctors, nurses, technicians, residents, and medical students. White coats encouraged.</p>
+            <p>Celebrated annually for all healthcare personnel: doctors, nurses, technicians, residents, and medical students. White coats encouraged.</p>
           </div>
 
           <div class="event-card">
             <div class="event-badge">Formation</div>
-            <h3>Bioethics &amp; Dinner Discussions</h3>
+            <h3>Bioethics and Dinner Discussions</h3>
             <p class="event-meta">Quarterly Fellowship</p>
             <p>Evenings of discussion on end-of-life care, Catholic reproductive technology ethics, and conscience rights in modern medicine.</p>
           </div>
@@ -354,11 +389,11 @@
               Whether you are an active physician, retired clinician, nurse, dental practitioner, resident, or TTUHSC medical student, there is a place for you in our fellowship.
             </p>
             <ul class="benefit-list">
-              <li>✓ Fellowship with like-minded Catholic healthcare colleagues</li>
-              <li>✓ Guidance on medical ethics and conscience protection</li>
-              <li>✓ Mentorship opportunities for healthcare students</li>
-              <li>✓ Inclusion in the local Catholic Provider Directory</li>
-              <li>✓ Affiliation with the National Catholic Medical Association (cathmed.org)</li>
+              <li>Fellowship with like-minded Catholic healthcare colleagues</li>
+              <li>Guidance on medical ethics and conscience protection</li>
+              <li>Mentorship opportunities for healthcare students</li>
+              <li>Inclusion in the local Catholic Provider Directory</li>
+              <li>Affiliation with the National Catholic Medical Association (cathmed.org)</li>
             </ul>
 
             <div class="national-box">
@@ -369,7 +404,7 @@
 
           <div class="join-form-wrapper">
             <form id="guild-contact-form" class="guild-form" novalidate>
-              <h3>Guild Contact &amp; Membership Inquiry</h3>
+              <h3>Guild Contact and Membership Inquiry</h3>
               <p class="form-instruction">Please fill out this form to inquire about guild membership or local meetings.</p>
 
               <div class="field-group">
@@ -385,7 +420,7 @@
               </div>
 
               <div class="field-group">
-                <label for="profession-role">Profession / Role <span class="required" aria-hidden="true">*</span></label>
+                <label for="profession-role">Profession or Role <span class="required" aria-hidden="true">*</span></label>
                 <select id="profession-role" name="role" required>
                   <option value="" disabled selected>Select your background...</option>
                   <option value="physician">Physician (M.D. / D.O.)</option>
@@ -405,7 +440,7 @@
               </div>
 
               <div class="field-group">
-                <label for="message">Message / Questions</label>
+                <label for="message">Message or Questions</label>
                 <textarea id="message" name="message" rows="4" placeholder="How can the Lubbock Guild support you?"></textarea>
               </div>
 
@@ -436,8 +471,9 @@
           <li><a href="#about">About the Guild</a></li>
           <li><a href="#prayer">Physician's Prayer</a></li>
           <li><a href="#heritage">Founding Heritage</a></li>
+          <li><a href="#gallery">Historical Archives</a></li>
           <li><a href="#directory">Local Provider Directory</a></li>
-          <li><a href="#events">White Mass &amp; Events</a></li>
+          <li><a href="#events">White Mass and Events</a></li>
         </ul>
       </div>
 
@@ -455,7 +491,7 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <p>&copy; <span id="current-year">2026</span> Catholic Medical Association of Lubbock. All rights reserved.</p>
-        <p class="footer-legacy">Re-established &amp; modernized from the original cmalubbock.org historical archives (2004&ndash;2017).</p>
+        <p class="footer-legacy">Re-established and modernized from original archives.</p>
       </div>
     </div>
   </footer>

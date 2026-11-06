@@ -189,3 +189,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+  // 5. Historical Archives Slideshow
+  const slides = document.querySelectorAll('#slideshow-container .slide');
+  const prevBtn = document.getElementById('prev-slide');
+  const nextBtn = document.getElementById('next-slide');
+  const indicatorsContainer = document.getElementById('slide-indicators');
+
+  if (slides.length > 0 && prevBtn && nextBtn && indicatorsContainer) {
+    let currentSlide = 0;
+
+    // Create indicator dots
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = `indicator-dot ${idx === 0 ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Go to slide ${idx + 1}`);
+      dot.addEventListener('click', () => goToSlide(idx));
+      indicatorsContainer.appendChild(dot);
+    });
+
+    const dots = indicatorsContainer.querySelectorAll('.indicator-dot');
+
+    function goToSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (n + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+    }
+
+    prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+
+    // Optional subtle auto-rotation every 6 seconds
+    let slideInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
+    const wrapper = document.querySelector('.slideshow-wrapper');
+    if (wrapper) {
+      wrapper.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      wrapper.addEventListener('mouseleave', () => {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 6000);
+      });
+    }
+  }
