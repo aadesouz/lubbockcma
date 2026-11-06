@@ -1400,3 +1400,129 @@ ul {
     text-align: center;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Lightweight Mobile Experience (Activated strictly on Mobile Viewports <= 768px)
+   Reduces heavy shadows, backdrop blur, padding, and layout weight
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Compact global spacing */
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.15rem;
+    line-height: 1.2;
+  }
+
+  .hero-lead {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Lighter visual decorations & GPU savings on mobile */
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+  }
+
+  .announcement-bar,
+  .site-header,
+  .slide-caption {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Simplify shadows to reduce paint costs on mobile chipsets */
+  .card,
+  .founder-card,
+  .provider-card,
+  .event-card,
+  .slideshow-wrapper,
+  .prayer-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  /* Streamlined directory & grid layouts */
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .provider-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .provider-card {
+    padding: 1.25rem;
+  }
+
+  /* Responsive compact gallery display */
+  .slideshow-wrapper {
+    padding: 0.85rem;
+    border-radius: var(--radius-md);
+  }
+
+  .slideshow-display {
+    aspect-ratio: 4 / 3;
+    max-height: 320px;
+  }
+
+  .slideshow-controls {
+    margin-top: 0.85rem;
+  }
+
+  /* Touch-friendly, high-contrast tap targets */
+  .nav-link,
+  .btn,
+  .slide-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Prayer parchment view optimized for mobile reading */
+  .prayer-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .prayer-stanza {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Form & inputs */
+  .join-card,
+  .join-form-wrapper {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Prevents iOS auto-zoom on input focus */
+  }
+
+  /* Simplified footer */
+  .footer-grid {
+    gap: 2rem;
+  }
+
+  .site-footer {
+    padding: 3rem 0 1.5rem;
+  }
+}
