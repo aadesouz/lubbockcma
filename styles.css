@@ -44,18 +44,6 @@
   --container-max: 1200px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #0b121c;
-    --color-surface: #111a27;
-    --color-surface-muted: #182333;
-    --color-surface-card: #141f2e;
-    --color-border: #233145;
-    --color-border-subtle: #33435c;
-    --color-text: #f1f5f9;
-    --color-text-muted: #94a3b8;
-  }
-}
 
 /* --------------------------------------------------------------------------
    Reset & Base Styles
@@ -212,11 +200,6 @@ ul {
   line-height: 1.2;
 }
 
-@media (prefers-color-scheme: dark) {
-  .brand-title {
-    color: #fff;
-  }
-}
 
 .brand-sub {
   display: block;
@@ -504,11 +487,6 @@ ul {
   margin-bottom: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .section-header h2 {
-    color: #ffffff;
-  }
-}
 
 .section-desc {
   font-size: 1.1rem;
@@ -548,11 +526,6 @@ ul {
   font-size: 1.25rem;
   color: var(--color-primary);
   margin-bottom: 0.75rem;
-}
-@media (prefers-color-scheme: dark) {
-  .info-card h3 {
-    color: #fff;
-  }
 }
 
 .info-card p {
@@ -609,11 +582,6 @@ ul {
   font-weight: 700;
   color: var(--color-primary);
 }
-@media (prefers-color-scheme: dark) {
-  .prayer-opening {
-    color: var(--color-accent-light);
-  }
-}
 
 .prayer-closing {
   margin-top: 1.5rem;
@@ -636,11 +604,6 @@ ul {
   font-size: 1.6rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
-}
-@media (prefers-color-scheme: dark) {
-  .heritage-text h3 {
-    color: #fff;
-  }
 }
 
 .heritage-text p {
@@ -678,11 +641,6 @@ ul {
   font-size: 1.15rem;
   color: var(--color-primary);
   margin-bottom: 0.35rem;
-}
-@media (prefers-color-scheme: dark) {
-  .founder-card h4 {
-    color: #fff;
-  }
 }
 
 .founder-card p {
@@ -773,22 +731,11 @@ ul {
   border-radius: var(--radius-sm);
   margin-bottom: 0.5rem;
 }
-@media (prefers-color-scheme: dark) {
-  .specialty-badge {
-    background: rgba(212, 175, 55, 0.15);
-    color: var(--color-accent-light);
-  }
-}
 
 .provider-card h3 {
   font-size: 1.2rem;
   color: var(--color-primary);
   margin-bottom: 0.25rem;
-}
-@media (prefers-color-scheme: dark) {
-  .provider-card h3 {
-    color: #fff;
-  }
 }
 
 .provider-affil {
@@ -853,11 +800,6 @@ ul {
   color: var(--color-primary);
   margin-bottom: 0.25rem;
 }
-@media (prefers-color-scheme: dark) {
-  .event-card h3 {
-    color: #fff;
-  }
-}
 
 .event-meta {
   font-size: 0.85rem;
@@ -886,11 +828,6 @@ ul {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: var(--color-primary);
   margin-bottom: 1rem;
-}
-@media (prefers-color-scheme: dark) {
-  .join-info h2 {
-    color: #fff;
-  }
 }
 
 .join-info p {
@@ -926,11 +863,6 @@ ul {
   color: var(--color-primary);
   margin-bottom: 0.25rem;
 }
-@media (prefers-color-scheme: dark) {
-  .national-box strong {
-    color: var(--color-accent-light);
-  }
-}
 
 .national-box p {
   font-size: 0.88rem;
@@ -955,11 +887,6 @@ ul {
   font-size: 1.35rem;
   color: var(--color-primary);
   margin-bottom: 0.25rem;
-}
-@media (prefers-color-scheme: dark) {
-  .guild-form h3 {
-    color: #fff;
-  }
 }
 
 .form-instruction {
