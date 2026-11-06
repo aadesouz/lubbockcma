@@ -54,7 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardSpecialty = card.getAttribute('data-specialty') || '';
       const textContent = card.textContent.toLowerCase();
 
-      const matchesSpecialty = (activeSpecialty === 'all') || (cardSpecialty === activeSpecialty);
+      const specialties = cardSpecialty.split(/\s+/);
+      const matchesSpecialty = (activeSpecialty === 'all') || specialties.includes(activeSpecialty);
       const matchesSearch = !searchQuery || textContent.includes(searchQuery);
 
       if (matchesSpecialty && matchesSearch) {

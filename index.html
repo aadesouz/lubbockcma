@@ -340,12 +340,13 @@
           </div>
           <div class="filter-pills" role="tablist" aria-label="Filter by specialty">
             <button class="pill active" role="tab" aria-selected="true" data-filter="all">All Specialties</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="primary-care">Internal &amp; Family</button>
             <button class="pill" role="tab" aria-selected="false" data-filter="orthopedics">Orthopedics</button>
             <button class="pill" role="tab" aria-selected="false" data-filter="pediatrics">Pediatrics</button>
-            <button class="pill" role="tab" aria-selected="false" data-filter="cardiology">Cardiology</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="oncology">Oncology</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="surgery">Surgery</button>
             <button class="pill" role="tab" aria-selected="false" data-filter="obgyn">OB/GYN</button>
-            <button class="pill" role="tab" aria-selected="false" data-filter="pathology">Pathology</button>
-            <button class="pill" role="tab" aria-selected="false" data-filter="primary-care">Family &amp; Internal</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="specialties">Other Specialties</button>
           </div>
         </div>
 
@@ -431,7 +432,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="pathology">
+          <article class="provider-card" data-specialty="pathology specialties">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_gary_simmons.jpg" alt="Dr. Gary Simmons, M.D." class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -446,12 +447,140 @@
               </div>
             </div>
           </article>
+
+          <article class="provider-card" data-specialty="oncology">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Nicholas C. D'Cunha, M.D." class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Hematology &amp; Medical Oncology</span>
+                  <h3>Dr. Nicholas C. D'Cunha, M.D.</h3>
+                  <p class="provider-affil">UMC Cancer Center &bull; TTUHSC</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 602 Indiana Ave., Lubbock, TX 79415</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="orthopedics surgery">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Mark Scioli, M.D." class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Orthopedic Surgery</span>
+                  <h3>Dr. Mark Scioli, M.D.</h3>
+                  <p class="provider-affil">The Center for Orthopedic Surgery &bull; UMC</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 4642 N. Loop 289, Lubbock, TX 79416</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="specialties surgery">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Jorge R. Brothers, M.D." class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Adult &amp; Pediatric Urology</span>
+                  <h3>Dr. Jorge R. Brothers, M.D.</h3>
+                  <p class="provider-affil">Lubbock Urology Clinic</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 418 N. Utica Ave., Lubbock, TX 79416</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="specialties surgery">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Michel J. Shami, M.D., FASRS" class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Ophthalmology &amp; Vitreoretinal Surgery</span>
+                  <h3>Dr. Michel J. Shami, M.D., FASRS</h3>
+                  <p class="provider-affil">Texas Retina Associates</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 4517 98th St., Lubbock, TX 79424</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="surgery specialties">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Jane M. Rowley, M.D." class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Plastic &amp; Reconstructive Surgery</span>
+                  <h3>Dr. Jane M. Rowley, M.D.</h3>
+                  <p class="provider-affil">Rowley Plastic Surgery</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 3519 22nd Place, Lubbock, TX 79410</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="primary-care specialties">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Melvin E. Laski, M.D." class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Nephrology &amp; Internal Medicine</span>
+                  <h3>Dr. Melvin E. Laski, M.D.</h3>
+                  <p class="provider-affil">Texas Tech Physicians &bull; TTUHSC</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 3601 4th St., Lubbock, TX 79430</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="pediatrics">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Bachar A. Al-Alami, M.D." class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Pediatrics &amp; Adolescent Medicine</span>
+                  <h3>Dr. Bachar A. Al-Alami, M.D.</h3>
+                  <p class="provider-affil">All About Kids Pediatrics</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 3813 22nd St., Ste. E, Lubbock, TX 79410</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="primary-care">
+            <div class="provider-card-inner">
+              <img loading="lazy" decoding="async" src="images/lukeshadow.jpg" alt="Dr. Mark Herrera Soriano, M.D." class="provider-photo" width="90" height="90">
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Internal Medicine</span>
+                  <h3>Dr. Mark Herrera Soriano, M.D.</h3>
+                  <p class="provider-affil">UMC Physicians at Southwest Medical</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 4004 82nd St., Ste. F, Lubbock, TX 79423</p>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
 
         <!-- Mobile Directory Toggle -->
         <div class="mobile-expand-wrapper text-center">
           <button type="button" id="toggle-directory-btn" class="btn btn-outline mobile-expand-btn" aria-expanded="false" aria-controls="directory-list">
-            <span class="btn-text">View All Providers (6)</span>
+            <span class="btn-text">View All Providers (14)</span>
             <span class="btn-icon">&darr;</span>
           </button>
         </div>
