@@ -1338,3 +1338,22 @@ ul {
   text-align: center;
   line-height: 1.4;
 }
+
+/* Clickable prayer card in hero */
+.prayer-preview-card {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.prayer-preview-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent-light);
+  box-shadow: var(--shadow-gold);
+}
+
+.prayer-preview-card:focus-visible {
+  outline: 3px solid var(--color-accent-light);
+  outline-offset: 4px;
+}
