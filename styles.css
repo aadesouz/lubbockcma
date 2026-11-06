@@ -578,18 +578,12 @@ ul {
   position: relative;
 }
 
-.prayer-container::before {
-  content: "✝";
-  position: absolute;
-  top: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--color-accent);
-  font-size: 1.5rem;
-}
-
 .prayer-header {
-  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
 
@@ -1322,15 +1316,25 @@ ul {
 
 /* Prayer Art Figure & Caption */
 .prayer-art-figure {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 1.25rem auto;
+  justify-content: center;
+  margin: 1.5rem auto 1rem auto;
+  text-align: center;
+}
+
+.prayer-art-figure img {
+  display: block;
+  margin: 0 auto;
 }
 
 .prayer-art-caption {
-  font-size: 0.8rem;
+  display: block;
+  font-size: 0.82rem;
   color: var(--color-text-muted);
   font-style: italic;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
+  text-align: center;
+  line-height: 1.4;
 }
