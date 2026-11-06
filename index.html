@@ -543,13 +543,21 @@
                   <option value="" disabled selected>Select your background...</option>
                   <option value="physician">Physician (M.D. / D.O.)</option>
                   <option value="resident-fellow">Resident / Fellow</option>
-                  <option value="medical-student">Medical Student (TTUHSC)</option>
+                  <option value="medical-student">Medical Student</option>
                   <option value="nurse">Nurse / Nurse Practitioner / PA</option>
                   <option value="dentist">Dentist</option>
                   <option value="allied-health">Allied Healthcare Professional</option>
                   <option value="supporter">Clergy / Community Supporter</option>
+                  <option value="other">Other</option>
                 </select>
                 <span class="field-error" id="role-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Other Role Specification Field (revealed when 'Other' selected) -->
+              <div class="field-group" id="other-role-group" style="display: none;">
+                <label for="other-role">Please Specify Role <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="other-role" name="other_role" placeholder="e.g. Healthcare Administrator, Bioethicist, Volunteer">
+                <span class="field-error" id="other-role-error" aria-live="polite"></span>
               </div>
 
               <div class="field-group">

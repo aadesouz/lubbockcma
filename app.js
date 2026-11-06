@@ -202,10 +202,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const otherRoleGroup = document.getElementById('other-role-group');
+  const otherRoleInput = document.getElementById('other-role');
+  const otherRoleErr = document.getElementById('other-role-error');
+
   if (roleSelect) {
     const roleErr = document.getElementById('role-error');
     roleSelect.addEventListener('change', () => {
       validateField(roleSelect, roleErr, val => val !== '', 'Please select your profession or role.');
+      if (roleSelect.value === 'other') {
+        if (otherRoleGroup) otherRoleGroup.style.display = 'block';
+        if (otherRoleInput) {
+          otherRoleInput.setAttribute('required', 'true');
+          otherRoleInput.focus();
+        }
+      } else {
+        if (otherRoleGroup) otherRoleGroup.style.display = 'none';
+        if (otherRoleInput) {
+          otherRoleInput.removeAttribute('required');
+          otherRoleInput.value = '';
+          if (otherRoleErr) otherRoleErr.textContent = '';
+        }
+      }
+    });
+  }
+
+  if (otherRoleInput) {
+    otherRoleInput.addEventListener('input', () => {
+      if (otherRoleErr) otherRoleErr.textContent = '';
+      otherRoleInput.removeAttribute('aria-invalid');
     });
   }
 
@@ -222,10 +247,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const isEmailValid = validateField(emailInput, emailErr, val => emailRegex.test(val), 'Please provide a valid email address.');
       const isRoleValid = validateField(roleSelect, roleErr, val => val !== '', 'Please select your profession or role.');
 
-      if (!isNameValid || !isEmailValid || !isRoleValid) {
+      let isOtherValid = true;
+      if (roleSelect && roleSelect.value === 'other' && otherRoleInput) {
+        isOtherValid = validateField(otherRoleInput, otherRoleErr, val => val.length >= 2, 'Please specify your profession or role.');
+      }
+
+      if (!isNameValid || !isEmailValid || !isRoleValid || !isOtherValid) {
         if (!isNameValid) nameInput.focus();
         else if (!isEmailValid) emailInput.focus();
         else if (!isRoleValid) roleSelect.focus();
+        else if (!isOtherValid) otherRoleInput.focus();
         return;
       }
 
