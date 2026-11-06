@@ -298,18 +298,35 @@ ul {
    Hero Section
    -------------------------------------------------------------------------- */
 .hero-section {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  position: relative;
   color: #ffffff;
   padding-block: clamp(3rem, 7vw, 5.5rem);
-  position: relative;
   overflow: hidden;
+  background-color: var(--color-primary-dark);
+  background-image: 
+    linear-gradient(135deg, rgba(13, 35, 58, 0.88) 0%, rgba(8, 23, 38, 0.93) 100%),
+    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+    url('images/whitemass/whitemass_01_pulpit.jpg');
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari handles fixed background poorly on mobile viewports; use scroll fallback for iOS */
+  @media (max-width: 768px) {
+    .hero-section {
+      background-attachment: scroll;
+    }
+  }
 }
 
 .hero-section::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
   pointer-events: none;
 }
 
