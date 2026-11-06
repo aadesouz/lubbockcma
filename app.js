@@ -262,7 +262,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-});
 
   // 5. Historical Archives Slideshow (Automatic advancing with touch/swipe support)
   const slides = document.querySelectorAll('#slideshow-container .slide');
