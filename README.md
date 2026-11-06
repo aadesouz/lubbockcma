@@ -41,7 +41,7 @@ You can host this website completely free with an automatic SSL certificate usin
 1. Push this folder to a GitHub repository (e.g., `cmalubbock`).
 2. In GitHub, go to **Settings > Pages**.
 3. Under **Build and deployment**, set Source to `Deploy from a branch` and select `main`.
-4. Under **Custom domain**, enter `lubbockcma.org` (or `cmalubbock.com`).
+4. Under **Custom domain**, enter `lubbockcma.org`.
 5. In your **Porkbun** account:
    * Click **DNS** next to your domain.
    * Add CNAME: `www` pointing to `<your-username>.github.io`
