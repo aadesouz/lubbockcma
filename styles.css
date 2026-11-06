@@ -1161,9 +1161,13 @@ ul {
    Historical Archives & Slideshow Styles
    -------------------------------------------------------------------------- */
 .brand-logo-img {
-  border-radius: 50%;
-  border: 2px solid var(--color-accent);
-  object-fit: cover;
+  height: 52px;
+  width: auto;
+  max-width: 52px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background-color: transparent;
+  display: block;
 }
 
 .card-bullet {
