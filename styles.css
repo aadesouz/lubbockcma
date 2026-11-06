@@ -1357,3 +1357,15 @@ ul {
   outline: 3px solid var(--color-accent-light);
   outline-offset: 4px;
 }
+
+/* President card accent */
+.president-card {
+  border-left-color: var(--color-accent);
+  background: var(--color-surface);
+  border-width: 1px 1px 1px 4px;
+}
+
+.president-badge {
+  color: var(--color-accent) !important;
+  font-weight: 800 !important;
+}
