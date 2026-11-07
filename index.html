@@ -339,20 +339,21 @@
             <input type="search" id="provider-search" placeholder="Search by name, specialty, or clinic..." autocomplete="off">
           </div>
           <div class="filter-pills" role="tablist" aria-label="Filter by specialty">
-            <button class="pill active" role="tab" aria-selected="true" data-filter="all">All Specialties</button>
+            <button class="pill active" role="tab" aria-selected="true" data-filter="all">All Disciplines</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="physicians">Physicians</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="pas">Physician Assistants</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="nursing">Nurses</button>
             <button class="pill" role="tab" aria-selected="false" data-filter="primary-care">Internal &amp; Family</button>
-            <button class="pill" role="tab" aria-selected="false" data-filter="orthopedics">Orthopedics</button>
             <button class="pill" role="tab" aria-selected="false" data-filter="pediatrics">Pediatrics</button>
-            <button class="pill" role="tab" aria-selected="false" data-filter="oncology">Oncology</button>
-            <button class="pill" role="tab" aria-selected="false" data-filter="surgery">Surgery</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="surgery">Surgery &amp; Ortho</button>
             <button class="pill" role="tab" aria-selected="false" data-filter="obgyn">OB/GYN</button>
-            <button class="pill" role="tab" aria-selected="false" data-filter="specialties">Other Specialties</button>
+            <button class="pill" role="tab" aria-selected="false" data-filter="specialties">Other Fields</button>
           </div>
         </div>
 
         <!-- Directory Grid -->
         <div class="directory-grid" id="directory-list" aria-live="polite">
-          <article class="provider-card" data-specialty="orthopedics">
+          <article class="provider-card" data-specialty="physicians orthopedics">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_karl_pankratz.jpg" alt="Dr. Karl G. Pankratz, M.D." class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -368,7 +369,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="pediatrics">
+          <article class="provider-card" data-specialty="physicians pediatrics">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_michal_pankratz.jpg" alt="Dr. Michal M. Pankratz, M.D." class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -384,7 +385,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care cardiology">
+          <article class="provider-card" data-specialty="physicians primary-care cardiology">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_kenneth_kruczek.jpg" alt="Dr. Kenneth E. Kruczek, D.O." class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -400,7 +401,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="obgyn">
+          <article class="provider-card" data-specialty="physicians obgyn">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_christina_belle_henry.jpg" alt="Dr. Christina Belle-Henry, M.D., FACOG" class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -416,7 +417,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="obgyn">
+          <article class="provider-card" data-specialty="physicians obgyn">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_benny_phillips.jpg" alt="Dr. Benny Phillips, M.D." class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -432,7 +433,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="radiology specialties">
+          <article class="provider-card" data-specialty="physicians radiology specialties">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_gary_simmons.jpg" alt="Dr. Gary Simmons, M.D." class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -448,7 +449,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="oncology">
+          <article class="provider-card" data-specialty="physicians oncology">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">ND</div>
               <div class="provider-body">
@@ -464,7 +465,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="orthopedics surgery">
+          <article class="provider-card" data-specialty="physicians orthopedics surgery">
             <div class="provider-card-inner">
               <img loading="lazy" decoding="async" src="images/providers/dr_mark_scioli.jpg" alt="Dr. Mark Scioli, M.D." class="provider-photo" width="90" height="90">
               <div class="provider-body">
@@ -481,7 +482,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="specialties surgery">
+          <article class="provider-card" data-specialty="physicians specialties surgery">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">JB</div>
               <div class="provider-body">
@@ -497,7 +498,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="specialties surgery">
+          <article class="provider-card" data-specialty="physicians specialties surgery">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">MS</div>
               <div class="provider-body">
@@ -513,7 +514,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="surgery specialties">
+          <article class="provider-card" data-specialty="physicians surgery specialties">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">JR</div>
               <div class="provider-body">
@@ -529,7 +530,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care specialties">
+          <article class="provider-card" data-specialty="physicians primary-care specialties">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">ML</div>
               <div class="provider-body">
@@ -545,7 +546,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="pediatrics">
+          <article class="provider-card" data-specialty="physicians pediatrics">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">BA</div>
               <div class="provider-body">
@@ -561,7 +562,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">MS</div>
               <div class="provider-body">
@@ -577,7 +578,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">FM</div>
               <div class="provider-body">
@@ -594,7 +595,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="pediatrics">
+          <article class="provider-card" data-specialty="physicians pediatrics">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">LC</div>
               <div class="provider-body">
@@ -611,7 +612,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">ED</div>
               <div class="provider-body">
@@ -628,7 +629,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="surgery">
+          <article class="provider-card" data-specialty="physicians surgery">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">SD</div>
               <div class="provider-body">
@@ -645,7 +646,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="specialties surgery">
+          <article class="provider-card" data-specialty="physicians specialties surgery">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">RR</div>
               <div class="provider-body">
@@ -662,7 +663,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">JR</div>
               <div class="provider-body">
@@ -679,7 +680,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">CR</div>
               <div class="provider-body">
@@ -696,7 +697,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">RS</div>
               <div class="provider-body">
@@ -713,7 +714,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="pediatrics">
+          <article class="provider-card" data-specialty="physicians pediatrics">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">KS</div>
               <div class="provider-body">
@@ -730,7 +731,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="pediatrics primary-care">
+          <article class="provider-card" data-specialty="physicians pediatrics primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">AC</div>
               <div class="provider-body">
@@ -747,7 +748,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="pediatrics primary-care">
+          <article class="provider-card" data-specialty="physicians pediatrics primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">EG</div>
               <div class="provider-body">
@@ -764,7 +765,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care specialties">
+          <article class="provider-card" data-specialty="physicians primary-care specialties">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">YT</div>
               <div class="provider-body">
@@ -781,7 +782,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="oncology">
+          <article class="provider-card" data-specialty="physicians oncology">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">CT</div>
               <div class="provider-body">
@@ -798,7 +799,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="specialties">
+          <article class="provider-card" data-specialty="physicians specialties">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">RT</div>
               <div class="provider-body">
@@ -815,7 +816,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="specialties">
+          <article class="provider-card" data-specialty="physicians specialties">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">NH</div>
               <div class="provider-body">
@@ -832,7 +833,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">EL</div>
               <div class="provider-body">
@@ -849,7 +850,7 @@
             </div>
           </article>
 
-          <article class="provider-card" data-specialty="primary-care">
+          <article class="provider-card" data-specialty="physicians primary-care">
             <div class="provider-card-inner">
               <div class="provider-initials" aria-hidden="true">RR</div>
               <div class="provider-body">
@@ -865,12 +866,185 @@
               </div>
             </div>
           </article>
+
+          <!-- Physician Assistant Listings -->
+          <article class="provider-card" data-specialty="pas primary-care">
+            <div class="provider-card-inner">
+              <div class="provider-initials" aria-hidden="true">DK</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Physician Assistant &bull; Cardiology</span>
+                  <h3>David A. King, PA-C</h3>
+                  <p class="provider-affil">Cardiovascular Care &bull; Lubbock Practice</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 3514 21st St., Lubbock, TX 79410</p>
+                  <p class="detail-line">Phone: (806) 725-1801</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Nursing Listings -->
+          <article class="provider-card" data-specialty="nursing">
+            <div class="provider-card-inner">
+              <div class="provider-initials" aria-hidden="true">TK</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Registered Nurse &bull; Clinical Care</span>
+                  <h3>Terry Kruczek, RN</h3>
+                  <p class="provider-affil">Covenant Medical Center</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: Lubbock, TX 79412</p>
+                  <p class="detail-line">Dedicated guild supporter and healthcare professional</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="nursing">
+            <div class="provider-card-inner">
+              <div class="provider-initials" aria-hidden="true">MO</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Registered Nurse &bull; Supportive &amp; Palliative Care</span>
+                  <h3>Morgan O'Brien, RN, CHPN, CEN</h3>
+                  <p class="provider-affil">University Medical Center (UMC)</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 5808 Colgate St., Lubbock, TX 79416</p>
+                  <p class="detail-line">Compassionate end-of-life care and patient advocacy</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="nursing">
+            <div class="provider-card-inner">
+              <div class="provider-initials" aria-hidden="true">MG</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Registered Nurse &bull; Clinical Care</span>
+                  <h3>Milagros R. Gatbonton, RN</h3>
+                  <p class="provider-affil">University Medical Center (UMC)</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: Lubbock, TX</p>
+                  <p class="detail-line">Phone: (806) 775-9780</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="nursing">
+            <div class="provider-card-inner">
+              <div class="provider-initials" aria-hidden="true">KB</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Registered Nurse &bull; Cardiac Care</span>
+                  <h3>Karen Belco, BSN, RN, FHRS</h3>
+                  <p class="provider-affil">Cardiac Electrophysiology &amp; Arrhythmia Care</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: 5407 70th St., Lubbock, TX 79424</p>
+                  <p class="detail-line">Fellow of the Heart Rhythm Society (FHRS)</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card" data-specialty="nursing">
+            <div class="provider-card-inner">
+              <div class="provider-initials" aria-hidden="true">TR</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Registered Nurse &bull; Clinical Care</span>
+                  <h3>Teresita Rodriguez, RN</h3>
+                  <p class="provider-affil">University Medical Center (UMC)</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Address: Lubbock, TX</p>
+                  <p class="detail-line">Phone: (806) 775-8300</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Invitation Cards for Open Disciplines -->
+          <article class="provider-card directory-open-card" data-specialty="specialties">
+            <div class="provider-card-inner">
+              <div class="provider-initials open-discipline-icon" aria-hidden="true">+</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Dental Medicine &bull; Open Listing</span>
+                  <h3>Catholic Dentists</h3>
+                  <p class="provider-affil">General Dentistry &bull; Orthodontics &bull; Oral Surgery</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Do you practice dentistry in Lubbock or West Texas?</p>
+                  <a href="#join" class="open-card-link">Join the Catholic Provider Directory &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card directory-open-card" data-specialty="specialties">
+            <div class="provider-card-inner">
+              <div class="provider-initials open-discipline-icon" aria-hidden="true">+</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Rehabilitation &bull; Open Listing</span>
+                  <h3>Physical, Occupational &amp; Speech Therapists</h3>
+                  <p class="provider-affil">PT &bull; OT &bull; Speech &bull; Mental Health Counseling</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Catholic therapists serving patients across the South Plains.</p>
+                  <a href="#join" class="open-card-link">Submit Your Practice Information &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card directory-open-card" data-specialty="specialties">
+            <div class="provider-card-inner">
+              <div class="provider-initials open-discipline-icon" aria-hidden="true">+</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">TTUHSC Students &amp; Residents</span>
+                  <h3>Medical &amp; Nursing Students</h3>
+                  <p class="provider-affil">Texas Tech University Health Sciences Center</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">Connect with Catholic physician mentors, ethics guidance, and White Mass events.</p>
+                  <a href="#join" class="open-card-link">Register for Guild Student Fellowship &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="provider-card directory-open-card" data-specialty="specialties">
+            <div class="provider-card-inner">
+              <div class="provider-initials open-discipline-icon" aria-hidden="true">+</div>
+              <div class="provider-body">
+                <div class="provider-header">
+                  <span class="specialty-badge">Allied Health &bull; Open Listing</span>
+                  <h3>Medical Technologists &amp; Clinical Staff</h3>
+                  <p class="provider-affil">Radiology, Lab, Pharmacy &amp; Clinical Personnel</p>
+                </div>
+                <div class="provider-details">
+                  <p class="detail-line">All clinical personnel are invited to unite in Catholic healthcare witness.</p>
+                  <a href="#join" class="open-card-link">Join Our Local Healthcare Network &rarr;</a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
 
         <!-- Mobile Directory Toggle -->
         <div class="mobile-expand-wrapper text-center">
           <button type="button" id="toggle-directory-btn" class="btn btn-outline mobile-expand-btn" aria-expanded="false" aria-controls="directory-list">
-            <span class="btn-text">View All Providers (31)</span>
+            <span class="btn-text">View All Providers (41)</span>
             <span class="btn-icon">&darr;</span>
           </button>
         </div>

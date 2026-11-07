@@ -1416,6 +1416,33 @@ ul {
   user-select: none;
 }
 
+.open-discipline-icon {
+  background: var(--color-surface-muted);
+  border: 2px dashed var(--color-accent);
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-family: var(--font-sans);
+}
+
+.directory-open-card {
+  border-style: dashed;
+  background: rgba(184, 134, 11, 0.02);
+}
+
+.open-card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+
+.open-card-link:hover {
+  color: var(--color-accent);
+}
+
 .provider-body {
   flex: 1;
   min-width: 0;
