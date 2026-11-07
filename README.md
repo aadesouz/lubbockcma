@@ -10,7 +10,7 @@ Official website for the **Catholic Medical Association of Lubbock, Texas**, ser
 * **Guild Pioneers:** Honors the founding Lubbock clinicians:
   * Dr. Kenneth E. Kruczek (Cardiology)
   * Dr. Benny Phillips (Obstetrics & Gynecology)
-  * Dr. Gary Simmons (Pathology)
+  * Dr. Gary Simmons (Interventional & Diagnostic Radiology)
 * **Events & Traditions:** Annual White Mass (Feast of St. Luke), Bioethics dinners, and student fellowship with Texas Tech University Health Sciences Center (TTUHSC).
 * **Local Provider Directory:** Filterable by specialty (Cardiology, OB/GYN, Pathology, Family & Internal Medicine, Pediatrics).
 * **Accessible Membership & Inquiries:** Modern, accessible contact form for membership and referral inquiries.
